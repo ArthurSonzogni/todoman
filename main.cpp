@@ -536,7 +536,7 @@ class TodoManager : public Component {
 	  i++;
 	}
 	if(uncompleted.size()) {
-	  int rand_task = uncompleted[(int)uncompleted.size()*(float) rand()/RAND_MAX];
+	  int rand_task = uncompleted[rand() % uncompleted.size()];
 	  todomenu.selected = rand_task;
 	  todomenu.TakeFocus();
 	}
